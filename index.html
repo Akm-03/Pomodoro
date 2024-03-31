@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="main.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Pomodoro App</title>
+  </head>
+  <body onload="template()">
+    <div class="container">
+   
+      <h1 class="text-center my-5 heading">Pomodoro App</h1>
+
+      <div class="container timer">
+        <div class="row">
+          <div class="col-5">
+            <h4 id="minutes"></h4>
+          </div>
+          <div class="col-2">
+            <h4>:</h4>
+          </div>
+          <div class="col-5">
+            <h4 id="seconds"></h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-5">
+        <h3 id="done" class="text-center"></h3>
+      </div>
+
+      <div class="conatiner d-flex justify-content-center align-items-cengter my-5">
+        <button class="btn" onclick="start_timer()"><i class="fa-solid fa-play fa-2x"></i></button>
+        <div class="reset-button">
+          <button class="btn" onclick="pause()"><i class="fa-solid fa-rotate-right fa-2x"></i>
+           reset
+      </div>   
+      </div>
+      <div id="controls">
+        <button id="start-btn">Start</button>
+        <button id="pause-btn">Pause</button>
+        <button id="reset-btn">Reset</button>
+    </div>
+    <div id="settings">
+        <label for="work-duration">Work Duration (minutes):<i class="fa-solid fa-house" style="color: #f1f2f3;"></i></label>
+        <input type="number" id="work-duration" value="25">
+        <label for="break-duration">Break Duration (minutes):<i class="fa-solid fa-house" style="color: #f1f2f3;"></i></label>
+        <input type="number" id="break-duration" value="5">
+    </div>
+    <div id="session-counter">
+        <p>Completed Sessions: <span id="session-count">0</span></p>
+    </div>
+    </div>
+  </body>
+</html>
